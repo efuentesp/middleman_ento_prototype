@@ -1,0 +1,13 @@
+logout: Salir
+welcome_message: Medición del Perfil Docente (MPD)
+search_pleaceholder: ¿Qué estás buscando?...
+
+breadcrumb_home: Inicio
+
+domain_mgmt_list: Lista de
+domain_mgmt_create: Crear
+domain_mgmt_refresh: Refrescar
+domain_mgmt_search: Buscar
+domain_mgmt_edit: Editar
+domain_mgmt_delete: Borrar
+domain_mgmt_page_found: elementos encontrados.

@@ -1,0 +1,13 @@
+# Required
+language: 'es-MX'
+url: 'http://mpd.entoeditorial.com'
+human_url: 'MPD.EntoEditorial.com'
+name: 'Medición del Perfil Docente de Ento Editorial'
+description: 'Medición del Perfil Docente de Ento Editorial'
+title: 'Medición del Perfil Docente de Ento Editorial'
+
+# Optional
+logo_image_name: 'logo.png'
+logo_image_path: 'http://mpd.entoeditorial.com/images/logo.png'
+twitter_handle: ''
+facebook_app_id: ''

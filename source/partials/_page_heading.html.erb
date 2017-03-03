@@ -1,0 +1,20 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-sm-4">
+    <h2><%= current_page.data.title %></h2>
+    <ol class="breadcrumb">
+      <li>
+        <%= link_to data.i18n.breadcrumb_home, '/', :id => 'breadcrumb-home-link' %>
+      </li>
+      <% if current_page.data.breadcrumb %>
+        <% current_page.data.breadcrumb.each do |item| %>
+          <li>
+            <%= link_to item.name, item.link %>
+          </li>
+        <% end %>
+      <% end %>
+      <li class="active">
+        <strong><%= current_page.data.title %></strong>
+      </li>
+    </ol>
+  </div>
+</div>

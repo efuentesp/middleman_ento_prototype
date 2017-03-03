@@ -1,0 +1,57 @@
+roles:
+  - code: platform_admin
+    name: Administrador Plataforma
+    menus:
+    - label: Mis Actividades
+      id: menu_mis_actividades
+      icon: "fa fa-th-large"
+      link: "/"
+    - label: Escuelas
+      id: menu_escuelas
+      icon: "fa fa-bell-o"
+      link: "/school_mgmt"
+    - label: Evaluadores
+      id: menu_evaluadores
+      icon: "fa fa-search"
+      link: "/"
+    - label: Análisis de Resultados
+      id: menu_analisis_resultados
+      icon: "fa fa-bar-chart"
+      link: "/"
+    - label: Cursos en Línea
+      id: cursos_linea
+      icon: "fa fa-graduation-cap"
+      link: "/"
+    - label: Preguntas Frecuentes
+      id: preguntas_frecuentes
+      icon: "fa fa-question-circle"
+      link: "/"
+    - label: Video Demo Plataforma
+      id: demo_video
+      icon: "fa fa-video-camera"
+      link: "/"
+
+  - code: teacher
+    name: Docente
+    menus:
+    - label: Mis Actividades
+      icon: "fa fa-th-large"
+      link: "/"
+    - label: Escuelas
+      icon: "fa fa-bell-o"
+      link: "/"
+    - label: Evaluadores
+      icon: "fa fa-search"
+      link: "/"
+    - label: Análisis de Resultados
+      icon: "fa fa-bar-chart"
+      link: "/"
+    - label: Cursos en Línea
+      icon: "fa fa-graduation-cap"
+      link: "/"
+    - label: Preguntas Frecuentes
+      icon: "fa fa-cuestion-circle"
+      link: "/"
+    - label: Video Demo Plataforma
+      icon: "fa fa-video-camara"
+      link: "/"
