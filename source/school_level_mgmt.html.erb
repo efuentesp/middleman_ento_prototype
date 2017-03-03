@@ -1,16 +1,16 @@
 ---
-title: Administrar de Escuelas
-domain_singular: Escuela
-domain_plural: Escuelas
-domain_url: school
+title: Administrar Niveles Escolares
+domain_singular: Nivel Escolar
+domain_plural: Niveles Escolares
+domain_url: school_level
 domain_children:
-  - name: Niveles Escolares
-    id: school_level_mgmt
-    link: "/school_level_mgmt"
+  - name: Docentes
+    id: teachers_mgmt
+    link: "/teacher_mgmt"
     icon: ""
-#breadcrumb:
-#  - name: Inicio
-#    link: "/"
+breadcrumb:
+  - name: Administrar Escuelas
+    link: "/school_mgmt"
 ---
 <%= partial 'partials/page_heading' %>
 
@@ -37,16 +37,19 @@ domain_children:
             <div class="m-t-md">
               <div class="pull-right">
               </div>
-              <small><%= data.schools.schools.count %> <%= data.i18n.domain_mgmt_page_found %></small>
+              <small><%= data.schools.schools[0].school_levels.count %> <%= data.i18n.domain_mgmt_page_found %></small>
             </div>
           </div>
           <div class="project-list">
             <table class="table table-hover">
               <tbody>
-                <% data.schools.schools.each_with_index do |school, index| %>
+                <% data.schools.schools[0].school_levels.each_with_index do |school_level, index| %>
                   <tr>
                     <td class="project-title">
-                      <%= school.name %>
+                      <%= data.schools.schools[0].name %>
+                    </td>
+                    <td class="project-title">
+                      <%= school_level.name %>
                     </td>
                     <td class="project-actions">
                       <% if current_page.data.domain_children %>

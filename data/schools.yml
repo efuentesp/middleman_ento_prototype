@@ -1,4 +1,12 @@
 schools:
   - name: Instituto Londres
+    school_levels:
+      - name: Primaria
+        teachers:
+          - name: Yolanda Ramírez Dueñas
+          - name: Horacio Salgado Bustos
+          - name: Karen Estela Solis Sánchez
+          - name: Brian López López
+      - name: Secundaria
   - name: Escuela Bancaria y de Valores
   - name: Colegio Tepeyac
