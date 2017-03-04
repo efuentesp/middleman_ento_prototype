@@ -1,0 +1,48 @@
+---
+title: Crear Nivel Escolar
+domain_singular: Nivel Escolar
+breadcrumb:
+  - name: Administrar Niveles Escolares
+    link: "/entities/school_level/management"
+form:
+  - label: Escuela
+    id: school
+    type: output
+    default_value:
+    col_size: xl
+    placeholder:
+  - label: Nivel Escolar
+    id: school_level
+    type: optionbox
+    default_value:
+    options:
+      - key_value: P
+        value: Preescolar
+      - key_value: 2
+        value: Primaria
+      - key_value: 3
+        value: Secundaria
+      - key_value: 4
+        value: Bachillerato
+    col_size: md
+    placeholder:
+  - label: Evaluador Asignado
+    id: assessor
+    type: chosen_select
+    default_value:
+    options:
+      - key_value: P
+        value: Alexander Welch
+      - key_value: 2
+        value: Tyler King
+      - key_value: 3
+        value: Delilah Morris
+      - key_value: 4
+        value: Dale Edwards
+    col_size: md
+    placeholder:
+---
+<%= partial 'partials/page_heading' %>
+<%= partial 'partials/page_action_head' %>
+<%= partial 'partials/page_form_components' %>
+<%= partial 'partials/page_create_edit_foot' %>

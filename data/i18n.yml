@@ -14,3 +14,4 @@ domain_mgmt_page_found: elementos encontrados.
 domain_save: Guardar
 domain_delete: Borrar
 domain_cancel: Regresar
+domain_form_select_default: Seleccionar

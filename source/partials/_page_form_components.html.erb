@@ -1,0 +1,36 @@
+<% current_page.data.form.each do |form_element| %>
+  <div class="form-group">
+    <label><%= form_element.label %></label>
+
+    <% if form_element.type == 'text' %>
+      <input type="text" placeholder="<%= form_element.placeholder %>" class="form-control">
+    <% elsif form_element.type == 'select' %>
+      <select class="form-control m-b" name="<%= form_element.id %>">
+        <% form_element.options.each do |option| %>
+          <option value="<%= option.key_value %>"><%= option.value %></option>
+        <% end %>
+      </select>
+    <% elsif form_element.type == 'output' %>
+      <p class="form-control-static"><%= data.schools.schools[0].name %></p>
+    <% elsif form_element.type == 'optionbox' %>
+      <% form_element.options.each do |option| %>
+        <div class="i-checks">
+          <label> <input type="radio" value="<%= option.key_value %>" name="<%= form_element.id %>"> <i></i> <%= option.value %> </label>
+        </div>
+      <% end %>
+    <% elsif form_element.type == 'chosen_select' %>
+      <div class="input-group">
+        <select data-placeholder="<%= form_element.placeholder %>" class="chosen-select" style="width:350px;" tabindex="2">
+          <option value=""><% data.i18n.domain_form_select_default %></option>
+          <% form_element.options.each do |option| %>
+            <option value="<%= option.key_value %>"><%= option.value %></option>
+          <% end %>
+        </select>
+      </div>
+    <% end %>
+
+    <% if form_element.help %>
+      <span class="help-block m-b-none"><%= form_element.help %></span>
+    <% end %>
+  </div>
+<% end %>

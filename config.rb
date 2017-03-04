@@ -51,7 +51,7 @@ end
 
 activate :directory_indexes
 activate :sprockets
-activate :middleman_simple_thumbnailer
+#activate :middleman_simple_thumbnailer
 
 # Build-specific configuration
 configure :build do
