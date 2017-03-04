@@ -1,5 +1,5 @@
 ---
-title: Editar Escuela
+title: Crear Escuela
 domain_singular: Escuela
 breadcrumb:
   - name: Administrar Escuelas
@@ -7,12 +7,10 @@ breadcrumb:
 form:
   - label: Nombre
     type: text
-    default_value: Daniela Jimenez Flores
     col_size: xl
     placeholder: Nombre completo de la Escuela
   - label: Email del Administrador
     type: text
-    default_value: daniela.flores@demoschool.edu.mx
     col_size: md
     placeholder: example@mail.com
 ---
@@ -22,7 +20,7 @@ form:
 <% current_page.data.form.each do |form_element| %>
   <div class="form-group">
     <label><%= form_element.label %></label>
-    <input type="email" placeholder="<%= form_element.placeholder %>" class="form-control" value="<%= form_element.default_value %>">
+    <input type="email" placeholder="<%= form_element.placeholder %>" class="form-control">
     <% if form_element.help %>
       <span class="help-block m-b-none"><%= form_element.help %></span>
     <% end %>

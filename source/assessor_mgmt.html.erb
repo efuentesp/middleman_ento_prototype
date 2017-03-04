@@ -1,26 +1,18 @@
 ---
-title: Administrar de Escuelas
-domain_singular: Escuela
-domain_plural: Escuelas
-domain_url: school
-domain_children:
-  - name: Niveles Escolares
-    id: school_level_mgmt
-    link: "/school_level_mgmt"
-    icon: ""
-#breadcrumb:
-#  - name: Inicio
-#    link: "/"
+title: Administrar Evaluadores
+domain_singular: Evaluador
+domain_plural: Evaluadores
+domain_url: assessor
 ---
 <%= partial 'partials/page_heading' %>
 <%= partial 'partials/page_search_head' %>
 
 <table class="table table-hover">
   <tbody>
-    <% data.schools.schools.each_with_index do |school, index| %>
+    <% data.schools.assessors.each_with_index do |assessor, index| %>
       <tr>
         <td class="project-title">
-          <%= school.name %>
+          <%= assessor.fullname %>
         </td>
         <td class="project-actions">
           <% if current_page.data.domain_children %>

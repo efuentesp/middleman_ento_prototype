@@ -13,7 +13,7 @@ roles:
     - label: Evaluadores
       id: menu_evaluadores
       icon: "fa fa-search"
-      link: "/"
+      link: "/assessor_mgmt"
     - label: Análisis de Resultados
       id: menu_analisis_resultados
       icon: "fa fa-bar-chart"

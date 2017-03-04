@@ -10,3 +10,12 @@ schools:
       - name: Secundaria
   - name: Escuela Bancaria y de Valores
   - name: Colegio Tepeyac
+
+assessors:
+  - fullname: Alexander Welch
+  - fullname: Tyler King
+  - fullname: Delilah Morris
+  - fullname: Dale Edwards
+  - fullname: Yasir Barton
+  - fullname: Anastasia O. Parrish
+  - fullname: Nevada I. Thompson
