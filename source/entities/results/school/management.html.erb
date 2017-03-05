@@ -1,19 +1,19 @@
 ---
-title: Administrar de Escuelas
+title: Resultados por Escuela
 domain_singular: Escuela
 domain_plural: Escuelas
 domain_url: school
 domain_children:
   - name: Niveles Escolares
     id: school_level_mgmt
-    link: "/entities/school_level/management"
-    icon: "fa fa-caret-square-o-right"
+    link: "/entities/results/school_level/management"
+    icon: "fa fa-bar-chart"
 #breadcrumb:
 #  - name: Inicio
 #    link: "/"
 ---
 <%= partial 'partials/page_heading' %>
-<%= partial 'partials/page_search_head', :locals => { :create_button => true } %>
+<%= partial 'partials/page_search_head', :locals => { :create_button => false } %>
 
 <table class="table table-hover">
   <tbody>
@@ -22,7 +22,7 @@ domain_children:
         <td class="project-title">
           <%= school.name %>
         </td>
-        <%= partial 'partials/page_search_actions', :locals => { :index => index, :edit_button => true, :delete_button => true } %>
+        <%= partial 'partials/page_search_actions', :locals => { :index => index, :edit_button => false, :delete_button => false } %>
       </tr>
     <% end %>
   </tbody>

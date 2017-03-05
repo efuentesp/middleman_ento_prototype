@@ -6,10 +6,14 @@
       <% end %>
     <% end %>
   <% end %>
-  <% link_to '/entities/'+current_page.data.domain_url+'/edit', :id => 'edit_button_'+(index+1).to_s, :class => 'btn btn-outline btn-default btn-sm' do %>
-    <i class="fa fa-pencil"></i> <%= data.i18n.domain_mgmt_edit %>
+  <% if edit_button %>
+    <% link_to '/entities/'+current_page.data.domain_url+'/edit', :id => 'edit_button_'+(index+1).to_s, :class => 'btn btn-outline btn-default btn-sm' do %>
+      <i class="fa fa-pencil"></i> <%= data.i18n.domain_mgmt_edit %>
+    <% end %>
   <% end %>
-  <% link_to '/entities/'+current_page.data.domain_url+'/delete', :id => 'delete_button_'+(index+1).to_s, :class => 'btn btn-outline btn-default btn-sm' do %>
-    <i class="fa fa-trash"></i> <%= data.i18n.domain_mgmt_delete %>
+  <% if delete_button %>
+    <% link_to '/entities/'+current_page.data.domain_url+'/delete', :id => 'delete_button_'+(index+1).to_s, :class => 'btn btn-outline btn-default btn-sm' do %>
+      <i class="fa fa-trash"></i> <%= data.i18n.domain_mgmt_delete %>
+    <% end %>
   <% end %>
 </td>

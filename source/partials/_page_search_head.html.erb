@@ -5,18 +5,20 @@
         <div class="ibox-title">
           <h5><%= data.i18n.domain_mgmt_list %> <%= current_page.data.domain_plural %></h5>
           <div class="ibox-tools">
-            <% link_to '/entities/'+current_page.data.domain_url+'/create', :id => 'create-button', :class => 'btn btn-primary' do %>
-              <i class="fa fa-plus-circle"></i> <%= "#{data.i18n.domain_mgmt_create} #{current_page.data.domain_singular}" %>
+            <% if create_button %>
+              <% link_to '/entities/'+current_page.data.domain_url+'/create', :id => 'create-button', :class => 'btn btn-primary' do %>
+                <i class="fa fa-plus-circle"></i> <%= "#{data.i18n.domain_mgmt_create} #{current_page.data.domain_singular}" %>
+              <% end %>
             <% end %>
           </div>
         </div>
         <div class="ibox-content">
           <div class="m-b-lg">
             <div class="input-group">
-                <input type="text" id="search-box" placeholder="<%= data.i18n.domain_mgmt_search %> <%= current_page.data.domain_singular %>" class=" form-control">
-                <span class="input-group-btn">
+              <input type="text" id="search-box" placeholder="<%= data.i18n.domain_mgmt_search %> <%= current_page.data.domain_singular %>" class=" form-control">
+              <span class="input-group-btn">
                 <button type="button" id="search-button" class="btn btn-info"><i class="fa fa-search"></i></button>
-            </span>
+              </span>
             </div>
             <div class="m-t-md">
               <div class="pull-right">
