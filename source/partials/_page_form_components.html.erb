@@ -39,6 +39,34 @@
           <% end %>
         </select>
       </div>
+
+    <% elsif form_element.type == 'chosen_multi_select' %>
+      <div class="form-group">
+        <div class="input-group">
+          <select data-placeholder="<%= form_element.placeholder %>" class="chosen-select" multiple style="width:700px;" tabindex="4">
+            <option value=""><% data.i18n.domain_form_select_default %></option>
+            <% form_element.options.each do |option| %>
+              <option value="<%= option.key_value %>" <% if option.key_value == form_element.default_value %> selected<% end %>>
+                <%= option.value %>
+              </option>
+            <% end %>
+          </select>
+        </div>
+      </div>
+
+    <% elsif form_element.type == 'file_upload' %>
+      <div class="input-group">
+        <div class="img-preview img-preview-sm">
+          <%= image_tag "/images/default-user.jpeg", resize_to: "120x" %>
+        </div>
+        <div class="btn-group">
+          <label title="Upload image file" for="inputImage" class="btn btn-white">
+            <input type="file" accept="image/*" name="file" id="inputImage" class="hide">
+            <i class="fa fa-upload" aria-hidden="true"></i> <%= data.i18n.domain_form_choose_file %>
+          </label>
+        </div>
+      </div>
+
     <% end %>
 
     <% if form_element.help %>

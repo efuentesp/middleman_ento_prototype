@@ -2,10 +2,6 @@ roles:
   - code: platform_admin
     name: Administrador Plataforma
     menus:
-    - label: Mis Actividades
-      id: menu_mis_actividades
-      icon: "fa fa-th-large"
-      link: "/"
     - label: Escuelas
       id: menu_escuelas
       icon: "fa fa-bell-o"

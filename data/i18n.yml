@@ -15,3 +15,8 @@ domain_save: Guardar
 domain_delete: Borrar
 domain_cancel: Regresar
 domain_form_select_default: Seleccionar
+domain_form_multi_select: Seleccionar un elemento o más
+domain_form_choose_file: Elegir archivo
+domain_form_change_file: Cambiar
+domain_form_remove_file: Eliminar
+domain_form_preview: Vista Previa

@@ -1,0 +1,40 @@
+---
+title: Borrar Docente
+domain_singular: Docente
+breadcrumb:
+  - name: Administrar Escuelas
+    link: "/entities/school/management"
+  - name: Administrar Niveles Escolares
+    link: "/entities/school_level/management"
+  - name: Administrar Docentes
+    link: "/entities/teacher/management"
+form:
+  - label: Escuela
+    id: school
+    type: output
+    default_value: Instituto Londres
+    col_size: xl
+    placeholder:
+  - label: Nivel Escolar
+    id: school_level
+    type: output
+    default_value: Secundaria
+    col_size: md
+    placeholder:
+  - label: Nombre completo
+    id: name
+    type: output
+    default_value: Yolanda Ramírez Dueñas
+    col_size: xl
+    placeholder: Nombre completo del Docente
+  - label: Materias impartidas
+    id: school_subjects
+    type: output
+    default_value: 1ro Matemáticas I
+    col_size: md
+    placeholder: Selecciona una o más Materias
+---
+<%= partial 'partials/page_heading' %>
+<%= partial 'partials/page_action_head' %>
+<%= partial 'partials/page_form_components' %>
+<%= partial 'partials/page_delete_foot' %>

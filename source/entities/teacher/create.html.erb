@@ -1,0 +1,55 @@
+---
+title: Crear Docente
+domain_singular: Docente
+breadcrumb:
+  - name: Administrar Escuelas
+    link: "/entities/school/management"
+  - name: Administrar Niveles Escolares
+    link: "/entities/school_level/management"
+  - name: Administrar Docentes
+    link: "/entities/teacher/management"
+form:
+  - label: Escuela
+    id: school
+    type: output
+    default_value: Instituto Londres
+    col_size: xl
+    placeholder:
+  - label: Nivel Escolar
+    id: school_level
+    type: output
+    default_value: Secundaria
+    col_size: md
+    placeholder:
+  - label: Nombre completo
+    id: name
+    type: text
+    default_value:
+    col_size: xl
+    placeholder: Nombre completo del Docente
+  - label: Materias impartidas
+    id: school_subjects
+    type: chosen_multi_select
+    default_value:
+    options:
+      - key_value: 1
+        value: 1ro Español I
+      - key_value: 2
+        value: 1ro Matemáticas I
+      - key_value: 3
+        value: 2do Tutoría
+      - key_value: 4
+        value: 2do Historia II
+    col_size: md
+    placeholder: Selecciona una o más Materias
+  - label: Subir Foto
+    id: photo
+    type: file_upload
+    default_value:
+    col_size: xl
+    placeholder:
+---
+<%= partial 'partials/page_heading' %>
+<%= partial 'partials/page_action_head' %>
+<%= partial 'partials/page_form_components' %>
+<%= partial 'partials/page_create_edit_foot' %>
