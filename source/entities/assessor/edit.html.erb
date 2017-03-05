@@ -1,0 +1,27 @@
+---
+title: Editar Evaluador
+domain_singular: Evaluador
+breadcrumb:
+  - name: Administrar Evaluadores
+    link: "/entities/assessor/management"
+form:
+  - label: Nombre completo
+    id: name
+    type: text
+    default_value: Alexander Welch
+    col_size: xl
+    placeholder: Nombre completo del Docente
+  - label: Foto
+    id: photo
+    type: file_upload
+    file_types: jpg
+    file_max_size: 1 Mb
+    default_value:
+    col_size: xl
+    placeholder:
+    optional: yes
+---
+<%= partial 'partials/page_heading' %>
+<%= partial 'partials/page_action_head' %>
+<%= partial 'partials/page_form_components' %>
+<%= partial 'partials/page_create_edit_foot' %>

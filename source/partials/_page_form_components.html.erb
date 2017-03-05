@@ -1,6 +1,8 @@
 <% current_page.data.form.each do |form_element| %>
   <div class="form-group">
-    <label><%= form_element.label %></label>
+    <label><%= form_element.label %>
+      <% if !form_element.optional && form_element.type != 'output' %><span class="text-danger"><strong> *</strong></span><% end %>
+    </label>
 
     <% if form_element.type == 'text' %>
       <input type="text" placeholder="<%= form_element.placeholder %>" class="form-control" value="<%= form_element.default_value %>">
@@ -56,6 +58,8 @@
 
     <% elsif form_element.type == 'file_upload' %>
       <div class="input-group">
+        <small><%= data.i18n.domain_form_file_types %>: <b><%= form_element.file_types %></b></small><br/>
+        <small><%= data.i18n.domain_form_file_max_size %>: <b><%= form_element.file_max_size %></b></small><br/><br/>
         <div class="img-preview img-preview-sm">
           <%= image_tag "/images/default-user.jpeg", resize_to: "120x" %>
         </div>

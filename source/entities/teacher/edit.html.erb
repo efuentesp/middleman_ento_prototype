@@ -51,12 +51,15 @@ form:
         value: 2do Historia II
     col_size: md
     placeholder: Selecciona una o más Materias
-  - label: Subir Foto
+  - label: Foto
     id: photo
     type: file_upload
+    file_types: jpg
+    file_max_size: 1 Mb
     default_value:
     col_size: xl
     placeholder:
+    optional: yes
 ---
 <%= partial 'partials/page_heading' %>
 <%= partial 'partials/page_action_head' %>

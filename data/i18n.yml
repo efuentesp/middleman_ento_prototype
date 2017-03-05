@@ -19,4 +19,6 @@ domain_form_multi_select: Seleccionar un elemento o más
 domain_form_choose_file: Elegir archivo
 domain_form_change_file: Cambiar
 domain_form_remove_file: Eliminar
+domain_form_file_types: Tipos de archivos permitidos
+domain_form_file_max_size: Tamaño de archivo máximo
 domain_form_preview: Vista Previa
