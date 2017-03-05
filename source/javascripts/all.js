@@ -8,6 +8,7 @@
 //= require jquery.flot.resize
 //= require jquery.flot.pie
 //= require jquery.peity.min
+//= require chosen.jquery.js
 //= require peity-demo
 //= require inspinia
 //= require pace.min
@@ -17,3 +18,8 @@
 //= require sparkline-demo
 //= require Chart.min
 //= require toastr.min
+
+$(".chosen-select").chosen({
+  disable_search_threshold: 2,
+  no_results_text: "Oops, nothing found!"
+});

@@ -1,0 +1,24 @@
+---
+title: Administrar Evaluadores
+domain_singular: Evaluador
+domain_plural: Evaluadores
+domain_url: assessor
+---
+<%= partial 'partials/page_heading' %>
+<%= partial 'partials/page_search_head' %>
+
+<table class="table table-hover">
+  <tbody>
+    <% data.schools.assessors.each_with_index do |assessor, index| %>
+      <tr>
+        <td class="project-title">
+          <%= assessor.fullname %>
+        </td>
+        <%= partial 'partials/page_search_actions', :locals => { :index => index } %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= partial 'partials/pager' %>
+<%= partial 'partials/page_search_foot' %>

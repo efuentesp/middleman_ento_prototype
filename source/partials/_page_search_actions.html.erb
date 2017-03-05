@@ -1,0 +1,15 @@
+<td class="project-actions">
+  <% if current_page.data.domain_children %>
+    <% current_page.data.domain_children.each do |child| %>
+      <% link_to child.link, :id => child.id+'_button_'+(index+1).to_s, :class => 'btn btn-outline btn-primary btn-sm' do %>
+        <i class="<%= child.icon %>"></i> <%= child.name %>
+      <% end %>
+    <% end %>
+  <% end %>
+  <% link_to '/entities/'+current_page.data.domain_url+'/edit', :id => 'edit_button_'+(index+1).to_s, :class => 'btn btn-outline btn-default btn-sm' do %>
+    <i class="fa fa-pencil"></i> <%= data.i18n.domain_mgmt_edit %>
+  <% end %>
+  <% link_to '/entities/'+current_page.data.domain_url+'/delete', :id => 'delete_button_'+(index+1).to_s, :class => 'btn btn-outline btn-default btn-sm' do %>
+    <i class="fa fa-trash"></i> <%= data.i18n.domain_mgmt_delete %>
+  <% end %>
+</td>

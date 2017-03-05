@@ -1,5 +1,5 @@
 ---
-title: Crear Nivel Escolar
+title: Editar Nivel Escolar
 domain_singular: Nivel Escolar
 breadcrumb:
   - name: Administrar Escuelas
@@ -9,16 +9,23 @@ breadcrumb:
 form:
   - label: Escuela
     id: school
-    type: output
-    default_value: Instituto Londres
+    type: chosen_select
+    default_value: 1
+    options:
+      - key_value: 1
+        value: Instituto Londres
+      - key_value: 2
+        value: Escuela Bancaria y de Valores
+      - key_value: 3
+        value: Colegio Tepeyac
     col_size: xl
     placeholder:
   - label: Nivel Escolar
     id: school_level
     type: optionbox
-    default_value:
+    default_value: 2
     options:
-      - key_value: P
+      - key_value: 1
         value: Preescolar
       - key_value: 2
         value: Primaria
@@ -31,9 +38,9 @@ form:
   - label: Evaluador Asignado
     id: assessor
     type: chosen_select
-    default_value:
+    default_value: 3
     options:
-      - key_value: P
+      - key_value: 1
         value: Alexander Welch
       - key_value: 2
         value: Tyler King

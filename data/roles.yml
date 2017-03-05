@@ -9,11 +9,11 @@ roles:
     - label: Escuelas
       id: menu_escuelas
       icon: "fa fa-bell-o"
-      link: "/school_mgmt"
+      link: "/entities/school/management"
     - label: Evaluadores
       id: menu_evaluadores
       icon: "fa fa-search"
-      link: "/assessor_mgmt"
+      link: "/entities/assessor/management"
     - label: Análisis de Resultados
       id: menu_analisis_resultados
       icon: "fa fa-bar-chart"

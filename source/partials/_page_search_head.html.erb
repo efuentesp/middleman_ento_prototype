@@ -5,7 +5,7 @@
         <div class="ibox-title">
           <h5><%= data.i18n.domain_mgmt_list %> <%= current_page.data.domain_plural %></h5>
           <div class="ibox-tools">
-            <% link_to '/'+current_page.data.domain_url+'_create', :id => 'create-button', :class => 'btn btn-primary' do %>
+            <% link_to '/entities/'+current_page.data.domain_url+'/create', :id => 'create-button', :class => 'btn btn-primary' do %>
               <i class="fa fa-plus-circle"></i> <%= "#{data.i18n.domain_mgmt_create} #{current_page.data.domain_singular}" %>
             <% end %>
           </div>

@@ -1,5 +1,5 @@
 ---
-title: Crear Nivel Escolar
+title: Borrar Nivel Escolar
 domain_singular: Nivel Escolar
 breadcrumb:
   - name: Administrar Escuelas
@@ -15,36 +15,18 @@ form:
     placeholder:
   - label: Nivel Escolar
     id: school_level
-    type: optionbox
-    default_value:
-    options:
-      - key_value: P
-        value: Preescolar
-      - key_value: 2
-        value: Primaria
-      - key_value: 3
-        value: Secundaria
-      - key_value: 4
-        value: Bachillerato
+    type: output
+    default_value: Primaria
     col_size: md
     placeholder:
   - label: Evaluador Asignado
     id: assessor
-    type: chosen_select
-    default_value:
-    options:
-      - key_value: P
-        value: Alexander Welch
-      - key_value: 2
-        value: Tyler King
-      - key_value: 3
-        value: Delilah Morris
-      - key_value: 4
-        value: Dale Edwards
+    type: output
+    default_value: Delilah Morris
     col_size: md
     placeholder:
 ---
 <%= partial 'partials/page_heading' %>
 <%= partial 'partials/page_action_head' %>
 <%= partial 'partials/page_form_components' %>
-<%= partial 'partials/page_create_edit_foot' %>
+<%= partial 'partials/page_delete_foot' %>

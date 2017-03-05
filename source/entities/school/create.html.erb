@@ -1,0 +1,24 @@
+---
+title: Crear Escuela
+domain_singular: Escuela
+breadcrumb:
+  - name: Administrar Escuelas
+    link: "/entities/school/management"
+form:
+  - label: Nombre
+    id: name
+    type: text
+    default_value:
+    col_size: xl
+    placeholder: Nombre completo de la Escuela
+  - label: Email del Administrador
+    id: username
+    type: email
+    default_value:
+    col_size: xl
+    placeholder: example@mail.com
+---
+<%= partial 'partials/page_heading' %>
+<%= partial 'partials/page_action_head' %>
+<%= partial 'partials/page_form_components' %>
+<%= partial 'partials/page_create_edit_foot' %>

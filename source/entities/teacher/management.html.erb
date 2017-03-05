@@ -1,29 +1,29 @@
 ---
-title: Administrar Niveles Escolares
-domain_singular: Nivel Escolar
-domain_plural: Niveles Escolares
-domain_url: school_level
-domain_children:
-  - name: Docentes
-    id: teachers_mgmt
-    link: "/entities/teacher/management"
-    icon: ""
+title: Administrar Docentes
+domain_singular: Docente
+domain_plural: Docentes
+domain_url: teacher
 breadcrumb:
   - name: Administrar Escuelas
     link: "/entities/school/management"
+  - name: Administrar Niveles Escolares
+    link: "/entities/school_level/management"
 ---
 <%= partial 'partials/page_heading' %>
 <%= partial 'partials/page_search_head' %>
 
 <table class="table table-hover">
   <tbody>
-    <% data.schools.schools[0].school_levels.each_with_index do |school_level, index| %>
+    <% data.schools.schools[0].school_levels[0].teachers.each_with_index do |teacher, index| %>
       <tr>
         <td class="project-title">
           <%= data.schools.schools[0].name %>
         </td>
         <td class="project-title">
-          <%= school_level.name %>
+          <%= data.schools.schools[0].school_levels[0].name %>
+        </td>
+        <td class="project-title">
+          <%= teacher.name %>
         </td>
         <%= partial 'partials/page_search_actions', :locals => { :index => index } %>
       </tr>

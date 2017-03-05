@@ -1,0 +1,32 @@
+---
+title: Administrar de Escuelas
+domain_singular: Escuela
+domain_plural: Escuelas
+domain_url: school
+domain_children:
+  - name: Niveles Escolares
+    id: school_level_mgmt
+    link: "/entities/school_level/management"
+    icon: ""
+#breadcrumb:
+#  - name: Inicio
+#    link: "/"
+---
+<%= partial 'partials/page_heading' %>
+<%= partial 'partials/page_search_head' %>
+
+<table class="table table-hover">
+  <tbody>
+    <% data.schools.schools.each_with_index do |school, index| %>
+      <tr>
+        <td class="project-title">
+          <%= school.name %>
+        </td>
+        <%= partial 'partials/page_search_actions', :locals => { :index => index } %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= partial 'partials/pager' %>
+<%= partial 'partials/page_search_foot' %>

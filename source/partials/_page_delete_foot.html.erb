@@ -1,6 +1,8 @@
           <div class="form-group">
-            <button class="btn btn-danger" type="submit"><i class="fa fa-trash"></i> <%= data.i18n.domain_delete %></button>
-            <%= link_to data.i18n.domain_cancel, current_page.data.breadcrumb[0].link, :class => 'btn btn-white' %>
+            <% link_to current_page.data.breadcrumb[-1].link, :class => 'btn btn-danger' do %>
+              <i class="fa fa-trash"></i> <%= data.i18n.domain_delete %>
+            <% end %>
+            <%= link_to data.i18n.domain_cancel, current_page.data.breadcrumb[-1].link, :class => 'btn btn-white' %>
           </div>
         </form>
       </div>

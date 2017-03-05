@@ -3,27 +3,39 @@
     <label><%= form_element.label %></label>
 
     <% if form_element.type == 'text' %>
-      <input type="text" placeholder="<%= form_element.placeholder %>" class="form-control">
+      <input type="text" placeholder="<%= form_element.placeholder %>" class="form-control" value="<%= form_element.default_value %>">
+
+    <% elsif form_element.type == 'email' %>
+      <input type="email" placeholder="<%= form_element.placeholder %>" class="form-control" value="<%= form_element.default_value %>">
+
     <% elsif form_element.type == 'select' %>
       <select class="form-control m-b" name="<%= form_element.id %>">
         <% form_element.options.each do |option| %>
           <option value="<%= option.key_value %>"><%= option.value %></option>
         <% end %>
       </select>
+
     <% elsif form_element.type == 'output' %>
-      <p class="form-control-static"><%= data.schools.schools[0].name %></p>
+      <p class="form-control-static"><%= form_element.default_value %></p>
+
     <% elsif form_element.type == 'optionbox' %>
       <% form_element.options.each do |option| %>
         <div class="i-checks">
-          <label> <input type="radio" value="<%= option.key_value %>" name="<%= form_element.id %>"> <i></i> <%= option.value %> </label>
+          <label>
+            <input type="radio" value="<%= option.key_value %>" name="<%= form_element.id %>" <% if option.key_value == form_element.default_value %> checked<% end %>>
+            <i></i> <%= option.value %>
+          </label>
         </div>
       <% end %>
+
     <% elsif form_element.type == 'chosen_select' %>
       <div class="input-group">
         <select data-placeholder="<%= form_element.placeholder %>" class="chosen-select" style="width:350px;" tabindex="2">
           <option value=""><% data.i18n.domain_form_select_default %></option>
           <% form_element.options.each do |option| %>
-            <option value="<%= option.key_value %>"><%= option.value %></option>
+            <option value="<%= option.key_value %>" <% if option.key_value == form_element.default_value %> selected<% end %>>
+              <%= option.value %>
+            </option>
           <% end %>
         </select>
       </div>
