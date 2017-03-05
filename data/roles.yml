@@ -13,7 +13,7 @@ roles:
     - label: Análisis de Resultados
       id: menu_analisis_resultados
       icon: "fa fa-bar-chart"
-      link: "/entities/results/school/management"
+      link: "/entities/results/platform_admin/school/management"
     - label: Cursos en Línea
       id: cursos_linea
       icon: "fa fa-graduation-cap"

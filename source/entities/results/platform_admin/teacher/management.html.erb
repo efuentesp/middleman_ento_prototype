@@ -1,0 +1,40 @@
+---
+title: Resultados por Docente
+domain_singular: Docente
+domain_plural: Docentes
+domain_url: teacher
+domain_children:
+  - name: Resultados
+    id: teachers_results
+    link: "/entities/results/platform_admin/teacher/results"
+    icon: "fa fa-bar-chart"
+breadcrumb:
+  - name: Resultados por Escuela
+    link: "/entities/results/platform_admin/school/management"
+  - name: Resultados por Nivel Escolar
+    link: "/entities/results/platform_admin/school_level/management"
+---
+<%= partial 'partials/page_heading' %>
+<%= partial 'partials/page_search_head', :locals => { :create_button => false } %>
+
+<table class="table table-hover">
+  <tbody>
+    <% data.schools.schools[0].school_levels[0].teachers.each_with_index do |teacher, index| %>
+      <tr>
+        <td class="project-title">
+          <%= data.schools.schools[0].name %>
+        </td>
+        <td class="project-title">
+          <%= data.schools.schools[0].school_levels[0].name %>
+        </td>
+        <td class="project-title">
+          <%= teacher.name %>
+        </td>
+        <%= partial 'partials/page_search_actions', :locals => { :index => index, :edit_button => false, :delete_button => false } %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= partial 'partials/pager' %>
+<%= partial 'partials/page_search_foot' %>
