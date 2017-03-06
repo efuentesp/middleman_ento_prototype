@@ -18,6 +18,8 @@
 //= require sparkline-demo
 //= require Chart.min
 //= require toastr.min
+//= require Chart.min.js
+//= require chartjs-demo.js
 
 $(".chosen-select").chosen({
   disable_search_threshold: 2,

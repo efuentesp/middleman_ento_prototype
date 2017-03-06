@@ -1,9 +1,12 @@
 <%= partial 'partials/head' %>
+
 <div class="wrapper">
     <%= partial 'partials/sidebar' %>
     <div id="page-wrapper" class="gray-bg dashbard-1">
         <%= partial 'partials/header' %>
+        <!-- Main Content -->
         <%= yield %>
+        <!-- End Main Content -->
     </div>
     <!-- <%= partial 'partials/footer' %> -->
     <%= partial 'partials/foot' %>

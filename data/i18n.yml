@@ -22,3 +22,6 @@ domain_form_remove_file: Eliminar
 domain_form_file_types: Tipos de archivos permitidos
 domain_form_file_max_size: Tamaño de archivo máximo
 domain_form_preview: Vista Previa
+
+results_learning_map: Mapa de Aprendizaje
+results_learning_take_course: Tomar Curso
