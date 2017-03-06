@@ -17,7 +17,7 @@ roles:
     - label: Cursos en Línea
       id: cursos_linea
       icon: "fa fa-graduation-cap"
-      link: "/"
+      link: "/entities/courses/grid"
     - label: Preguntas Frecuentes
       id: preguntas_frecuentes
       icon: "fa fa-question-circle"
