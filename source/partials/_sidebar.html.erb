@@ -1,52 +1,49 @@
 <nav class="navbar-default navbar-static-side" role="navigation">
-    <div class="sidebar-collapse">
-        <ul class="nav metismenu" id="side-menu">
-            <li class="nav-header">
-                <div class="dropdown profile-element">
-                    <span>
-                      <%= image_tag data.profiles.profile[0].picture, resize_to: "48x48", :class => 'img-circle', :alt => data.profiles.profile[0].fullname %>
-                    </span>
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                      <span class="clear">
-                        <span class="block m-t-xs">
-                          <strong class="font-bold"><%= data.profiles.profile[0].fullname %></strong>
-                        </span>
-                        <span class="text-muted text-xs block"><%= data.profiles.profile[0].role %>
-                          <b class="caret"></b>
-                        </span>
-                      </span>
-                    </a>
-                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                        <li>
-                            <a href="profile.html">Profile</a>
-                        </li>
-                        <li>
-                            <a href="contacts.html">Contacts</a>
-                        </li>
-                        <li>
-                            <a href="mailbox.html">Mailbox</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li>
-                            <a href="login.html">Logout</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="logo-element">
-                    MPD
-                </div>
-            </li>
-
-            <% data.roles.roles[0].menus.each do |menu| %>
+  <div class="sidebar-collapse">
+    <ul class="nav metismenu" id="side-menu">
+      <li class="nav-header">
+        <div class="dropdown profile-element">
+            <span>
+              <%= image_tag data.profiles.profile[0].picture, resize_to: "48x48", :class => 'img-circle', :alt => data.profiles.profile[0].fullname %>
+            </span>
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+              <span class="clear">
+                <span class="block m-t-xs">
+                  <strong class="font-bold"><%= data.profiles.profile[0].fullname %></strong>
+                </span>
+                <span class="text-muted text-xs block"><%= data.profiles.profile[0].role %>
+                  <b class="caret"></b>
+                </span>
+              </span>
+            </a>
+            <ul class="dropdown-menu animated fadeInRight m-t-xs">
               <li>
-                <% link_to menu.link, :id => menu.id do %>
-                  <i class="<%= menu.icon %>"></i>
-                  <span class="nav-label"><%= menu.label %></span>
-                <% end %>
+                <a href="profile.html">Profile</a>
               </li>
-            <% end %>
-
-        </ul>
-
-    </div>
+              <li>
+                <a href="contacts.html">Contacts</a>
+              </li>
+              <li>
+                <a href="mailbox.html">Mailbox</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="login.html">Logout</a>
+              </li>
+            </ul>
+          </div>
+          <div class="logo-element">
+            MPD
+          </div>
+      </li>
+      <% data.roles.roles[0].menus.each do |menu| %>
+        <li <% if current_page.url == menu.link+'/' %>class="active"<% end %> >
+          <% link_to menu.link, :id => menu.id do %>
+            <i class="<%= menu.icon %>"></i>
+            <span class="nav-label"><%= menu.label %></span>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </nav>
