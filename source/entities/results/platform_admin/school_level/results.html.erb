@@ -1,0 +1,45 @@
+---
+title: Resultados por Dimensión
+breadcrumb:
+  - name: Resultados por Escuelas
+    link: "/entities/results/platform_admin/school/management"
+  - name: Resultados por Niveles Escolares
+    link: "/entities/results/platform_admin/school_level/management"
+profile:
+  school: Instituto Londres
+  school_level: Primaria
+  picture: "/images/school-avatar.png"
+---
+<%= partial 'partials/page_heading' %>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row m-b-lg m-t-lg">
+    <div class="col-md-6">
+      <div class="profile-image">
+        <%= image_tag current_page.data.profile.picture, resize_to: "96x96", :class => 'img-circle circle-border m-b-md', :alt => current_page.data.profile.name %>
+      </div>
+      <div class="profile-info">
+        <div class="">
+          <div>
+            <br/>
+            <h2 class="no-margins"><%= current_page.data.profile.school %></h2>
+            <h3><%= current_page.data.profile.school_level %></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5><%= current_page.data.title %></h5>
+        </div>
+        <div class="ibox-content">
+          <div><canvas id="lineChart" height="140"></canvas></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

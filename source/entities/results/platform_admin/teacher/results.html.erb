@@ -1,16 +1,25 @@
 ---
-title: Resultados por Demesión
+title: Resultados por Dimensión
+breadcrumb:
+  - name: Resultados por Escuelas
+    link: "/entities/results/platform_admin/school/management"
+  - name: Resultados por Niveles Escolares
+    link: "/entities/results/platform_admin/school/management"
+  - name: Resultados por Docentes
+    link: "/entities/results/platform_admin/school_level/management"
 profile:
   name: Horacio Salgado Bustos
   school: Instituto Londres
   school_level: Primaria
   role: Docente
   email: horacio.salgado.mail.edu.mx
+  picture: "/images/default-teacher-avatar.png"
 learning_map:
   - dimension_number: 4
     dimension_name: Un Docente que asume las ...
     course: La Educación en México y la inclusión Educativa
     course_url: "/"
+    course_info_url: "/"
     text_color: text-danger
     results:
       - name: Planeación
@@ -23,6 +32,7 @@ learning_map:
     dimension_name: Un Docente que organiza y evalúa ...
     course: Habilidades docentes en el Aula
     course_url: "/"
+    course_info_url: "/"
     text_color: text-warning
     results:
       - name: Planeación
@@ -41,6 +51,7 @@ learning_map:
     dimension_name: Un Docente que conoce a sus alumnos ...
     course: Enseñanza centradada en el Alumno
     course_url: "/"
+    course_info_url: "/"
     text_color: text-warning
     results:
       - name: Planeación
@@ -59,6 +70,7 @@ learning_map:
     dimension_name: Un Docente que se reconoce como ...
     course: Práctica Docente Eficaz
     course_url: "/"
+    course_info_url: "/"
     text_color: text-info
     results:
       - name: Planeación
@@ -71,6 +83,7 @@ learning_map:
     dimension_name: Un Docente que participa en el ...
     course: Gestión Escolar Estratégica
     course_url: "/"
+    course_info_url: "/"
     text_color: text-success
     results:
       - name: Planeación
@@ -80,11 +93,13 @@ learning_map:
         points: 70 de 120 respuestas correctas
         level: Nivel 3
 ---
+<%= partial 'partials/page_heading' %>
+
 <div class="wrapper wrapper-content animated fadeInRight">
   <div class="row m-b-lg m-t-lg">
     <div class="col-md-6">
       <div class="profile-image">
-        <img src="/img/a4.jpg" class="img-circle circle-border m-b-md" alt="profile">
+        <%= image_tag current_page.data.profile.picture, resize_to: "96x96", :class => 'img-circle circle-border m-b-md', :alt => current_page.data.profile.name %>
       </div>
       <div class="profile-info">
         <div class="">
@@ -135,8 +150,8 @@ learning_map:
                       <% end %>
                     </span>
                     <strong>Dimensión <%= dimension.dimension_number %>. <%= dimension.dimension_name %></strong><br/><br/>
-                    <% link_to dimension.course_url do %>
-                      <i class="fa fa-youtube-play"></i> Curso: <%= dimension.course %>
+                    <% link_to dimension.course_info_url do %>
+                      <i class="fa fa-info-circle"></i> Curso: <%= dimension.course %>
                     <% end %>
                     <br/><br/>
                     <table class="table">

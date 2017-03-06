@@ -1,5 +1,6 @@
 profile:
   - fullname: Juan Pérez Huerta
     role: Administrador Plataforma
+    picture: "/images/default-admin-avatar.png"
   - fullname: Josefina Jimenez Sandovál
     role: Docente

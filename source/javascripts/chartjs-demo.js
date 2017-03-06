@@ -60,6 +60,9 @@ $(function () {
         datasetStrokeWidth: 2,
         datasetFill: true,
         responsive: true,
+        legend: {
+           display: true
+        }
     };
 
 
