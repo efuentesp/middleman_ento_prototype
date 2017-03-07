@@ -1,0 +1,42 @@
+---
+title: Fin de la Encuesta
+profile:
+  name: Horacio Salgado Bustos
+  school: Instituto Londres
+  school_level: Primaria
+  role: Docente
+  email: horacio.salgado.mail.edu.mx
+  picture: "/images/default-teacher-avatar.png"
+---
+<%= partial 'partials/page_heading' %>
+
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="row m-b-lg m-t-lg">
+    <div class="col-md-6">
+      <div class="profile-image">
+        <%= image_tag current_page.data.profile.picture, resize_to: "96x96", :class => 'img-circle circle-border m-b-md', :alt => current_page.data.profile.name %>
+      </div>
+      <div class="profile-info">
+        <div class="">
+          <div>
+            <h3><%= current_page.data.profile.school %> (<%= current_page.data.profile.school_level %>)</h3>
+            <h2 class="no-margins"><%= current_page.data.profile.name %></h2>
+            <!-- <h4><%= current_page.data.profile.role %></h4> -->
+            <h5><%= current_page.data.profile.email %></h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content text-center p-md">
+          <h2><span class="text-navy">¡Gracias por haber contestado la Encuesta!</span></h2>
+          <p>Hemos recibido tus respuestas, puedes ver tus resultados en la opción <a href="/entities/results/teacher/results">Análisis de Resultados</a> del menú.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

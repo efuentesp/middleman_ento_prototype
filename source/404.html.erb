@@ -1,0 +1,18 @@
+---
+layout: single_page
+title: 404
+name: Página no encontrada
+description: "Los sentimos, la página que solicitaste no existe. Intenta regresar a la página principal."
+---
+
+<div class="middle-box text-center animated fadeInDown">
+    <h1><%= current_page.data.title %></h1>
+    <h3 class="font-bold"><%= current_page.data.name %></h3>
+
+    <div class="error-desc">
+        <%= current_page.data.description %><br/><br/>
+        <% link_to '/', :class => 'btn btn-primary' do %>
+        <i class="fa fa-home" aria-hidden="true"></i> Inicio
+        <% end %>
+    </div>
+</div>

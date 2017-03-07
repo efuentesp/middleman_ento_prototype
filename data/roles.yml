@@ -21,7 +21,7 @@ roles:
     - label: Preguntas Frecuentes
       id: preguntas_frecuentes
       icon: "fa fa-question-circle"
-      link: "/"
+      link: "/entities/faq"
     - label: Video Demo Plataforma
       id: demo_video
       icon: "fa fa-video-camera"
