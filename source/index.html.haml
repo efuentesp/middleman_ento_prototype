@@ -1,0 +1,29 @@
+---
+layout: single_page
+title: MPD Ento Editorial
+users:
+  - role: Administrador Plataforma
+    link: "/admin"
+    picture: "/images/default-admin-avatar.png"
+  - role: Administrador Escuela
+    link: "/admin-school"
+    picture: "/images/default-school-admin-avatar.png"
+  - role: Docente
+    link: "/teacher"
+    picture: "/images/default-teacher-avatar.png"
+  - role: Evaluador
+    link: "/assessor"
+    picture: "/images/default-assessor-avatar.png"
+---
+
+%div{ :class=> 'gray-bg dashbard-1'}
+  %div{ :class => 'wrapper wrapper-content animated fadeInRight' }
+    %div{ :class => 'row' }
+
+    - current_page.data.users.each do |user|
+      %div{ :class => 'col-lg-4 col-lg-offset-1'}
+        %div{ :class => 'contact-box center-version'}
+          = link_to user.link do
+            = image_tag user.picture, :class => 'img-circle', :alt => 'Administrador Plataforma Login'
+            %h3{ :class=> 'm-b-xs'}
+              %strong= user.role
