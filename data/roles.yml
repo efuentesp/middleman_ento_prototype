@@ -17,11 +17,11 @@ roles:
     - label: Cursos en Línea
       id: cursos_linea
       icon: "fa fa-graduation-cap"
-      link: "/entities/courses/grid"
+      link: "/entities/courses/platform_admin/grid"
     - label: Preguntas Frecuentes
       id: preguntas_frecuentes
       icon: "fa fa-question-circle"
-      link: "/entities/faq"
+      link: "/entities/faq/platform_admin"
     - label: Video Demo Plataforma
       id: demo_video
       icon: "fa fa-video-camera"
@@ -32,22 +32,16 @@ roles:
     menus:
     - label: Mis Actividades
       icon: "fa fa-th-large"
-      link: "/"
-    - label: Escuelas
-      icon: "fa fa-bell-o"
-      link: "/"
-    - label: Evaluadores
-      icon: "fa fa-search"
-      link: "/"
+      link: "/teacher"
     - label: Análisis de Resultados
       icon: "fa fa-bar-chart"
-      link: "/"
+      link: "/entities/results/teacher/results"
     - label: Cursos en Línea
       icon: "fa fa-graduation-cap"
       link: "/"
     - label: Preguntas Frecuentes
-      icon: "fa fa-cuestion-circle"
+      icon: "fa fa-question-circle"
       link: "/"
     - label: Video Demo Plataforma
-      icon: "fa fa-video-camara"
+      icon: "fa fa-video-camera"
       link: "/"

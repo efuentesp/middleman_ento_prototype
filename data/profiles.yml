@@ -2,5 +2,6 @@ profile:
   - fullname: Juan Pérez Huerta
     role: Administrador Plataforma
     picture: "/images/default-admin-avatar.png"
-  - fullname: Josefina Jimenez Sandovál
+  - fullname: Horacio Salgado Bustos
     role: Docente
+    picture: "/images/default-teacher-avatar.png"

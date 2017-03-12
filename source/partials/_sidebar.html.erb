@@ -4,14 +4,14 @@
       <li class="nav-header">
         <div class="dropdown profile-element">
             <span>
-              <%= image_tag data.profiles.profile[0].picture, resize_to: "48x48", :class => 'img-circle', :alt => data.profiles.profile[0].fullname %>
+              <%= image_tag data.profiles.profile[current_page.data.role_index].picture, resize_to: "48x48", :class => 'img-circle', :alt => data.profiles.profile[current_page.data.role_index].fullname %>
             </span>
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
               <span class="clear">
                 <span class="block m-t-xs">
-                  <strong class="font-bold"><%= data.profiles.profile[0].fullname %></strong>
+                  <strong class="font-bold"><%= data.profiles.profile[current_page.data.role_index].fullname %></strong>
                 </span>
-                <span class="text-muted text-xs block"><%= data.profiles.profile[0].role %>
+                <span class="text-muted text-xs block"><%= data.profiles.profile[current_page.data.role_index].role %>
                   <b class="caret"></b>
                 </span>
               </span>
@@ -30,7 +30,7 @@
             MPD
           </div>
       </li>
-      <% data.roles.roles[0].menus.each do |menu| %>
+      <% data.roles.roles[current_page.data.role_index].menus.each do |menu| %>
         <li <% if current_page.url == menu.link+'/' %>class="active"<% end %> >
           <% link_to menu.link, :id => menu.id do %>
             <i class="<%= menu.icon %>"></i>
