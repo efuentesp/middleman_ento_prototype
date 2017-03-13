@@ -1,0 +1,64 @@
+%div{ :class => 'wrapper wrapper-content animated fadeInRight' }
+  %div{ :class => 'row m-b-lg m-t-lg' }
+    %div{ :class => 'col-md-6' }
+      %div{ :class => 'col-md-6' }
+        = image_tag current_page.data.profile.picture, resize_to: "96x96", :class => 'img-circle circle-border m-b-md', :alt => current_page.data.profile.name
+      %div{ :class => 'profile-info' }
+        %div{ :class => '' }
+          %div
+            %h3
+              = current_page.data.profile.school
+              (
+              = current_page.data.profile.school_level
+              )
+            %h2{ :class => 'no-margins' }= current_page.data.profile.name
+            %h4{ :class => 'no-margins' }= current_page.data.profile.email
+
+- current_page.data.survey.sections.each do |section|
+  %div{ :class => 'row' }
+    %div{ :class => 'col-lg-12' }
+      %div{ :class => 'ibox float-e-margins' }
+        %div{ :class => 'ibox-title' }
+          %h5= section.title
+        %div{ :class => 'ibox-content' }
+
+          - section.sections.each do |subsection|
+            %div{ :class => 'ibox' }
+              %div{ :class => 'ibox-title' }
+                %h5= subsection.title
+                %div{ :class => 'ibox-content' }
+                  %div{ :class => 'project-list' }
+                    %table{ :class => 'table table-hover' }
+                      %theader
+                        %tr
+                          %td{ :class => 'col-md-8' }
+                          - current_page.data.survey.options.each do |option|
+                            %td{ :class => 'col-md-1' }= option
+                      %tbody
+                        - subsection.questions.each do |question|
+                          %tr
+                            %td{ :class => 'project-title'}
+                              %span= question.title
+                            - current_page.data.survey.options.each do |option|
+                              %td
+                                %input{ :type => 'radio', :name => question.code }
+
+          = link_to '#', :class => 'btn btn-blank' do
+            %i{ :class => 'fa fa-save' }
+            %span
+            Guardar
+          - if current_page.data.survey.prev_question
+            = link_to current_page.data.survey.prev_question, :class => 'btn btn-default' do
+              %i{ :class => 'fa fa-step-backward' }
+              %span
+                Anterior
+          - if current_page.data.survey.next_question
+            = link_to current_page.data.survey.next_question, :class => 'btn btn-primary' do
+              %span
+                Siguiente
+              %i{ :class => 'fa fa-step-forward' }
+          - if current_page.data.survey.end_question
+            = link_to current_page.data.survey.end_question, :class => 'btn btn-success' do
+              %span
+                Terminar
+              %i{ :class => 'fa fa-check' }

@@ -1,0 +1,69 @@
+---
+title: Portafolio de Enseñanza
+role_index: 1
+home_link: '/teacher'
+
+profile:
+  name: Horacio Salgado Bustos
+  school: Instituto Londres
+  school_level: Primaria
+  role: Docente
+  email: horacio.salgado.mail.edu.mx
+  picture: "/images/default-teacher-avatar.png"
+
+survey:
+  description: "Da clic en la siguiente liga para descargar la guía que te ayudará a preparar los archivos para tu portafolio de enseñanza. Y después completa la información solicitada en el siguiente formato, una vez terminada la sección, dar clic en el botón 'Siguiente'."
+  prev_question: '/entities/survey/webform/p2'
+  next_question: '/entities/survey/webform/p4'
+  attached_files:
+    - name: "Guia. Portafolio Evidencias de Enseñanza"
+      icon: "fa-file-pdf-o"
+      link: "#"
+
+form:
+  - label: "Grado"
+    id: grado
+    type: text
+    default_value:
+    col_size: xl
+    placeholder:
+  - label: "Bloque"
+    id: bloque
+    type: text
+    default_value:
+    col_size: xl
+    placeholder:
+  - label: "Contenido"
+    id: contenido
+    type: text
+    default_value:
+    col_size: xl
+    placeholder:
+  - label: "Tema"
+    id: tema
+    type: text
+    default_value:
+    col_size: xl
+    placeholder:
+  - label: "Aprendizaje esperado "
+    id: aprendizaje_esperado
+    type: text
+    default_value:
+    col_size: xl
+    placeholder:
+  - label: "Competencias"
+    id: competencias
+    type: textarea
+    default_value:
+    col_size: xl
+    placeholder:
+  - label: "Estándares"
+    id: estandares
+    type: textarea
+    default_value:
+    col_size: xl
+    placeholder:
+---
+
+= partial 'partials/page_heading'
+= partial 'partials/webform'

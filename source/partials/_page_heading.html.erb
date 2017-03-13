@@ -3,7 +3,7 @@
     <h2><%= current_page.data.title %></h2>
     <ol class="breadcrumb">
       <li>
-        <%= link_to data.i18n.breadcrumb_home, '/', :id => 'breadcrumb-home-link' %>
+        <%= link_to data.i18n.breadcrumb_home, current_page.data.home_link, :id => 'breadcrumb-home-link' %>
       </li>
       <% if current_page.data.breadcrumb %>
         <% current_page.data.breadcrumb.each do |item| %>

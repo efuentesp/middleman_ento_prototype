@@ -1,0 +1,31 @@
+---
+title: Fin de la Encuesta
+role_index: 1
+home_link: '/teacher'
+
+profile:
+  name: Horacio Salgado Bustos
+  school: Instituto Londres
+  school_level: Primaria
+  role: Docente
+  email: horacio.salgado.mail.edu.mx
+  picture: "/images/default-teacher-avatar.png"
+---
+
+= partial 'partials/page_heading'
+
+%div{ :class => 'wrapper wrapper-content animated fadeInRight' }
+  %div{ :class => 'row' }
+    %div{ :class => 'col-lg-12' }
+      %div{ :class => 'ibox float-e-margins' }
+        %div{ :class => 'ibox-content text-center p-md' }
+          %div
+            = image_tag '/images/sign-check-icon.png', resize_to: "96x96", :class => 'img-circle circle-border m-b-md'
+          %h2
+            %span{ :class => 'text-navy' } ¡Gracias por haber contestado!
+          %p
+            Hemos recibido tus información, tan pronto hayan sido evaluados tus resultados los podrás ver
+            %br
+            en la opción
+            = link_to 'Análisis de Resultados', '/entities/results/teacher/results'
+            del menú.

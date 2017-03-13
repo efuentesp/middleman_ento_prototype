@@ -1,6 +1,96 @@
 ---
-title: Panel del Docente
+title: Mis Actividades
 role_index: 1
+home_link: '/teacher'
 
+activities:
+  - name: "Diagnóstico de mi Perfil Docente"
+    tasks:
+      - title: "Autoevaluación del Perfil Docente (Educación Básica)"
+        completion: "0%"
+        action_title: Contestar
+        action_icon: 'fa-check'
+        action_btn: 'btn-primary'
+        action_link: '/entities/survey/grid/p1'
 
+  - name: "Evaluar mi Portafolio de Enseñanza"
+    tasks:
+      - title: "Portafolio de Enseñanza "
+        completion: "0%"
+        action_title: Contestar
+        action_icon: 'fa-check'
+        action_btn: 'btn-primary'
+        action_link: '/entities/survey/webform/p1'
+
+  - name: "Simulador"
+    tasks:
+      - title: "Examen de Conocimientos y Competencias Didácticas"
+        completion: "0%"
+        action_title: Contestar
+        action_icon: 'fa-check'
+        action_btn: 'btn-primary'
+        action_link: '/entities/quiz/q01/q1'
+
+  - name: "Mis Cursos en Línea"
+    tasks:
+      - title: "Curso. Dimensión 1. Enseñanza Centrada en el Alumno"
+        completion: "0%"
+        action_title: Inscribirme
+        action_icon: 'fa-check'
+        action_btn: 'btn-primary'
+        action_link: '#'
+      - title: "Curso. Dimensión 2. Habilidades Docentes en el Aula"
+        completion: "0%"
+        action_title: Inscribirme
+        action_icon: 'fa-check'
+        action_btn: 'btn-primary'
+        action_link: '#'
+      - title: "Curso. Dimensión 3. Práctica Docente Eficaz"
+        completion: "35%"
+        icon: ''
+        action_title: Continuar
+        action_icon: 'fa-play'
+        action_btn: 'btn-warning'
+        action_link: '#'
+      - title: "Curso. Dimensión 4. La Educación en México y la Inclusión Educativa"
+        completion: "100%"
+      - title: "Curso. Dimensión 5. Gestión Escolar Estratégica "
+        completion: "0%"
+        action_title: Inscribirme
+        action_icon: 'fa-check'
+        action_btn: 'btn-primary'
+        action_link: '#'
 ---
+= partial 'partials/page_heading'
+
+%div{ :class => 'row' }
+  %div{ :class => 'col-lg-12' }
+    %div{ :class => 'wrapper wrapper-content animated fadeInUp' }
+      - current_page.data.activities.each do |activity|
+        %div{ :class => 'ibox' }
+          %div{ :class => 'ibox-title' }
+            %h5= activity.name
+            %div{ :class => 'ibox-content' }
+              %div{ :class => 'project-list' }
+                %table{ :class => 'table table-hover' }
+                  %theader
+                    %tr
+                      %td{ :class => 'col-md-8' } Nombre
+                      %td{ :class => 'col-md-3' } % Avance
+                      %td{ :class => 'col-md-1' } Acciones
+                  %tbody
+                    - activity.tasks.each do |task|
+                      %tr
+                        %td{ :class => 'project-title'}
+                          %span= task.title
+                        %td{ :class => 'project-completion'}
+                          %small
+                            Avance:
+                            = task.completion
+                          %div{ :class => 'progress progress-mini' }
+                            %div{ :class => 'progress-bar' }
+                        %td{ :class => 'project-actions'}
+                          - if task.completion != '100%'
+                            = link_to task.action_link, :class => "btn #{task.action_btn}" do
+                              %i{ :class => "fa #{task.action_icon}"}
+                              %span= task.action_title

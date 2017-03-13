@@ -43,6 +43,9 @@
               </tbody>
             </table>
           <% end %>
+          <% link_to '#', :class => 'btn btn-blank' do %>
+            <i class="fa fa-save" aria-hidden="true"></i> Guardar
+          <% end %>
           <% if current_page.data.quiz.prev_question %>
             <% link_to current_page.data.quiz.prev_question, :class => 'btn btn-default' do %>
               <i class="fa fa-step-backward" aria-hidden="true"></i> Anterior

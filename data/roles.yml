@@ -25,7 +25,7 @@ roles:
     - label: Video Demo Plataforma
       id: demo_video
       icon: "fa fa-video-camera"
-      link: "/"
+      link: "#"
 
   - code: teacher
     name: Docente
@@ -44,4 +44,4 @@ roles:
       link: "/"
     - label: Video Demo Plataforma
       icon: "fa fa-video-camera"
-      link: "/"
+      link: "#"

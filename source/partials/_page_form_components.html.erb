@@ -7,6 +7,9 @@
     <% if form_element.type == 'text' %>
       <input type="text" placeholder="<%= form_element.placeholder %>" class="form-control" value="<%= form_element.default_value %>">
 
+    <% elsif form_element.type == 'textarea' %>
+      <textarea class="form-control"><%= form_element.default_value %></textarea>
+
     <% elsif form_element.type == 'email' %>
       <input type="email" placeholder="<%= form_element.placeholder %>" class="form-control" value="<%= form_element.default_value %>">
 
@@ -60,9 +63,11 @@
       <div class="input-group">
         <small><%= data.i18n.domain_form_file_types %>: <b><%= form_element.file_types %></b></small><br/>
         <small><%= data.i18n.domain_form_file_max_size %>: <b><%= form_element.file_max_size %></b></small><br/><br/>
-        <div class="img-preview img-preview-sm">
-          <%= image_tag form_element.file_image, resize_to: form_element.file_image_resize %>
-        </div>
+        <% if form_element.file_image %>
+          <div class="img-preview img-preview-sm">
+            <%= image_tag form_element.file_image, resize_to: form_element.file_image_resize %>
+          </div>
+        <% end %>
         <div class="btn-group">
           <label title="Upload image file" for="inputImage" class="btn btn-white">
             <input type="file" accept="image/*" name="file" id="inputImage" class="hide">

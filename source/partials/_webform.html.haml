@@ -1,0 +1,52 @@
+%div{ :class => 'wrapper wrapper-content animated fadeInRight' }
+  %div{ :class => 'row m-b-lg m-t-lg' }
+    %div{ :class => 'col-md-6' }
+      %div{ :class => 'col-md-6' }
+        = image_tag current_page.data.profile.picture, resize_to: "96x96", :class => 'img-circle circle-border m-b-md', :alt => current_page.data.profile.name
+      %div{ :class => 'profile-info' }
+        %div{ :class => '' }
+          %div
+            %h3
+              = current_page.data.profile.school
+              (
+              = current_page.data.profile.school_level
+              )
+            %h2{ :class => 'no-margins' }= current_page.data.profile.name
+            %h4{ :class => 'no-margins' }= current_page.data.profile.email
+
+%div{ :class => 'row' }
+  %div{ :class => 'col-lg-12' }
+    %div{ :class => 'ibox float-e-margins' }
+      %div{ :class => 'ibox-title' }
+        %h5= current_page.data.title
+      %div{ :class => 'ibox-content' }
+        %p= current_page.data.survey.description
+        %ul
+          - current_page.data.survey.attached_files.each do |file|
+            %li
+              = link_to file.link do
+                %i{ :class => "fa #{file.icon}" }
+                = file.name
+        %br
+
+        = partial 'partials/page_form_components'
+
+        = link_to '#', :class => 'btn btn-blank' do
+          %i{ :class => 'fa fa-save' }
+          %span
+          Guardar
+        - if current_page.data.survey.prev_question
+          = link_to current_page.data.survey.prev_question, :class => 'btn btn-default' do
+            %i{ :class => 'fa fa-step-backward' }
+            %span
+              Anterior
+        - if current_page.data.survey.next_question
+          = link_to current_page.data.survey.next_question, :class => 'btn btn-primary' do
+            %span
+              Siguiente
+            %i{ :class => 'fa fa-step-forward' }
+        - if current_page.data.survey.end_question
+          = link_to current_page.data.survey.end_question, :class => 'btn btn-success' do
+            %span
+              Terminar
+            %i{ :class => 'fa fa-check' }
